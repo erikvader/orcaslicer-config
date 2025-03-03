@@ -1,0 +1,3 @@
+name = "eSUN PLA+"
+inherits = "Bambu PLA Basic @BBL A1"
+filament_max_volumetric_speed = ["22"]

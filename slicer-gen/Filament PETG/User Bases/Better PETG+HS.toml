@@ -1,0 +1,16 @@
+name = "Better PETG+HS"
+inherits = "Generic PETG @BBL A1"
+
+filament_max_volumetric_speed = ["20"]
+
+# Is 75 because eSUN wants that as minimum
+textured_plate_temp = ["75"]
+textured_plate_temp_initial_layer = ["75"]
+hot_plate_temp = ["75"]
+hot_plate_temp_initial_layer = ["75"]
+
+nozzle_temperature = ["260"]
+nozzle_temperature_initial_layer = ["260"]
+
+description = """
+Based on the other 'Better PETG' preset, but uses values from eSUN and their PETG+HS filament."""

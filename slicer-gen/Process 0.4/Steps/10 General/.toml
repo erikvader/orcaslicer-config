@@ -1,0 +1,45 @@
+# Leaves ugly zits on the top surface due to gap fill when the default monotonic line is used
+top_surface_pattern = "monotonic"
+
+# Not really needed for PLA on textured PEI in my experience, but needed otherwise
+brim_type = "brim_ears"
+
+# Needed some more
+elefant_foot_compensation = "0.15"
+
+# Preferred support settings
+enable_support = "1"
+support_on_build_plate_only = "1"
+support_style = "tree_hybrid"
+support_threshold_angle = "25"
+support_type = "tree(manual)"
+
+# To reduce the chance of the walls being see through
+wall_loops = "!atleast(3)"
+
+# Rectilinear infill gives the most consistent layer times, reducing banding on the outer
+# wall. But it does not print well on low layer heights, causing blobs that the nozzle
+# crashes into. Infill combination fixes this, but can give more variance to layer times.
+sparse_infill_pattern = "zig-zag"
+sparse_infill_density = "10"
+
+# Always reverse printing order of inner walls to reduce part stresses.
+overhang_reverse = "1"
+overhang_reverse_internal_only = "1"
+overhang_reverse_threshold = "0%"
+
+# The outer wall is NOT squished against the others to make it more consistent.
+precise_outer_wall = "1"
+
+# Should be better than the classic one
+wall_generator = "arachne"
+
+# Hide the seam more
+wipe_on_loops = "1"
+
+# Increases strength by staggering the seams
+staggered_inner_seams = "1"
+
+description = """
+Consider enabling infill combination on lower (variable) layer heights to make the
+infill succeed."""

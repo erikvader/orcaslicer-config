@@ -1,0 +1,11 @@
+# Can't be too low to account for VFA, but should be between 30-60mm/s according to the
+# bambu wiki.
+outer_wall_speed = "!cap(70)"
+
+# Not vertical, but is slowed down to match to get the same shininess.
+top_surface_speed = "!cap(70)"
+
+description = """
+Outer wall speeds are slowed down to get a shinier surface finish. Also works for PLA Metal.
+Beware of Bambus non-plus PLA Silk, it sticks really well to textured PEI, so use a raft
+with some normal PLA."""

@@ -1,0 +1,21 @@
+# This speed on the outer wall shows the least pronounced Vertical Fine Artifacts. Too low
+# and steppers motor artifacts are showing, too high and ghosting or something starts
+# showing more.
+outer_wall_speed = "110"
+
+# Taken from the standard 0.16mm high quality profile
+outer_wall_acceleration = "2000"
+
+# It isn't vertical, but the top surface is slowed down to increase quality a little, just
+# like the outer wall. The lines are more even than with the default speed of 150.
+top_surface_speed = "!cap(110)"
+
+# Taken from the standard 0.16mm high quality profile
+top_surface_acceleration = "2000"
+
+# VFA test results on dark blue eSUN PLA+:
+# 0.2mm standard with outer wall accel 5000 mm/s^2 and jerk 9 mm/s^3
+#   best outer wall: 90-110 mm/s
+# 0.16mm high quality with outer wall accel 2000 mm/s^2 and jerk 9 mm/s^3
+#   best outer wall: 100-120 mm/s
+#   worst outer wall: 60 mm/s and below

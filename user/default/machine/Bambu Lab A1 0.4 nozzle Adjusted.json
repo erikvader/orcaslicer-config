@@ -1,0 +1,13 @@
+{
+    "from": "User",
+    "inherits": "Bambu Lab A1 0.4 nozzle",
+    "is_custom_defined": "0",
+    "name": "Bambu Lab A1 0.4 nozzle Adjusted",
+    "nozzle_type": "hardened_steel",
+    "printer_settings_id": "Bambu Lab A1 0.4 nozzle Adjusted",
+    "time_lapse_gcode": "",
+    "version": "1.10.0.35",
+    "wipe_distance": [
+        "2"
+    ]
+}

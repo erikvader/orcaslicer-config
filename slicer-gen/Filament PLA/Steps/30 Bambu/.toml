@@ -1,0 +1,2 @@
+# Disable an experimental feature
+filament_long_retractions_when_cut = ["nil"]

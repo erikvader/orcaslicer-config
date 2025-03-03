@@ -1,0 +1,6 @@
+# When using variable layer heights: ensure the bottom is at least as thick as it would be normally
+bottom_shell_thickness = """
+!(dec(parent(key='bottom_shell_layers')) - 1) \
+  * dec(parent(key='layer_height')) \
+  + dec(parent(key='initial_layer_print_height'))
+"""
