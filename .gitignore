@@ -1,0 +1,16 @@
+/HS-Parameters-for-Bambu-Lab.rar
+/hms
+/log
+/ota
+/printers
+/user/hints.cereal
+/OrcaSlicer.conf
+/cache/
+/plugins/
+/BambuNetworkEngine.conf
+/user/default/*/~*.json
+/user/default/*/*.info
+.dir-locals.el
+*.png
+*.stl
+*.svg
