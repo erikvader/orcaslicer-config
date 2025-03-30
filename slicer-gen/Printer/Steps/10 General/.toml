@@ -1,0 +1,20 @@
+nozzle_type = "hardened_steel"
+
+# I'm not using this and it makes the gcode preview messy. There also is (was?) a bug
+# where the printer would do a blob buildup detection even though it was turned off.
+time_lapse_gcode = ""
+
+# Bambu studio and orca slicer differ in how they handle wiping.
+# https://github.com/SoftFever/OrcaSlicer/pull/3094 Bambu ignores the retraction speed and
+# can use higher values, while orca takes it into consideration and does an extra
+# retraction before the wipe to compensate. This extra retraction makes the seam uglier,
+# so the below settings have been adjusted to avoid it.
+
+# The default of 0.8mm retraction seems excessive, this should be enough, can maybe be
+# even lower.
+retraction_length = ["0.5"]
+# Bambu studio has always wiped with 45mm/s on outer walls (at 110mm/s) all along, and not
+# the default 30mm/s.
+retraction_speed = ["45"]
+# Restore bambu default
+wipe_distance = ["2"]
