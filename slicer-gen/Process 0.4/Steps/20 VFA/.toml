@@ -19,3 +19,8 @@ top_surface_acceleration = "2000"
 # 0.16mm high quality with outer wall accel 2000 mm/s^2 and jerk 9 mm/s^3
 #   best outer wall: 100-120 mm/s
 #   worst outer wall: 60 mm/s and below
+
+# Match this with the defaults in bambu studio, which greatly reduces ringing artefacts.
+inner_wall_acceleration = "!parent(key='default_acceleration')"
+# This is also lowered to not be so ridiculously high
+travel_acceleration = "!parent(key='default_acceleration')"

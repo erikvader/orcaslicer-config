@@ -18,3 +18,13 @@ retraction_length = ["0.5"]
 retraction_speed = ["45"]
 # Restore bambu default
 wipe_distance = ["2"]
+
+# The A1 takes about this long to fully change from 60% fan speed to 80%. On small
+# overhangs the fan would miss completely.
+fan_speedup_time = "0.75"
+# No fan pre-speedup seems to happen if this is enabled?
+fan_speedup_overhangs = "0"
+
+# The auto option includes spiral z hops, which seem to cause artefacts in the outer wall
+# sometimes.
+z_hop_types = ["Slope Lift"]
