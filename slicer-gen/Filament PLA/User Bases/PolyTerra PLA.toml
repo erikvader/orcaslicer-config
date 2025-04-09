@@ -1,0 +1,7 @@
+name = "PolyTerra PLA"
+inherits = "Bambu PLA Basic @BBL A1"
+
+# This matches the profile that can be imported in the slicer
+filament_max_volumetric_speed = ["22"]
+slow_down_layer_time = ["8"]
+
