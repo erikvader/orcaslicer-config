@@ -1,4 +1,4 @@
-name = "Better PETG"
+name = "eSUN PETG"
 inherits = "Generic PETG @BBL A1"
 
 # Is 75 because eSUN wants that as minimum
@@ -6,6 +6,10 @@ textured_plate_temp = ["75"]
 textured_plate_temp_initial_layer = ["75"]
 hot_plate_temp = ["75"]
 hot_plate_temp_initial_layer = ["75"]
+eng_plate_temp = ["75"]
+eng_plate_temp_initial_layer = ["75"]
+supertack_plate_temp = ["75"]
+supertack_plate_temp_initial_layer = ["75"]
 
 description = """
 Supposedly gives better results than the Bambu PETG profiles by having lower max flow

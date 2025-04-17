@@ -1,0 +1,12 @@
+name = "eSUN PETG+HS"
+inherits = "Bambu PETG HF @BBL A1"
+
+# Is 75 because eSUN wants that as minimum, as written on the spool
+textured_plate_temp = ["75"]
+textured_plate_temp_initial_layer = ["75"]
+hot_plate_temp = ["75"]
+hot_plate_temp_initial_layer = ["75"]
+eng_plate_temp = ["75"]
+eng_plate_temp_initial_layer = ["75"]
+supertack_plate_temp = ["75"]
+supertack_plate_temp_initial_layer = ["75"]
