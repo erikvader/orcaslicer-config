@@ -1,0 +1,5 @@
+# Top surfaces are underextruded with eSUN PLA+, at least some colors. This is maybe a
+# band aid fix and the real solution is to calibrate the flow ratio in the filament
+# settings?
+top_solid_infill_flow_ratio = "1.1"
+
