@@ -1,5 +1,6 @@
-# Leaves ugly zits on the top surface due to gap fill when the default monotonic line is used
-top_surface_pattern = "monotonic"
+# The latest greatest pattern for top and bottom
+top_surface_pattern = "monotonicline"
+bottom_surface_pattern = "monotonicline"
 
 # Not really needed for PLA on textured PEI in my experience, unless the surface area is
 # really small, but needed otherwise
