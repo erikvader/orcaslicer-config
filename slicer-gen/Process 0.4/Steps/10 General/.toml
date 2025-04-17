@@ -46,10 +46,6 @@ seam_gap = "15%"
 # The gap infill is equal to this everywhere except for the high quality preset
 gap_infill_speed = "!parent(key='internal_solid_infill_speed')"
 
-# This seems to slow down the printer in places it shouldn't, like straight walls, causing
-# the layers to expand differently.
-slowdown_for_curled_perimeters = "0"
-
 description = """
 Consider enabling infill combination on lower (variable) layer heights to make the
 infill succeed."""
