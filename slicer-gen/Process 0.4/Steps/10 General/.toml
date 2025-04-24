@@ -44,9 +44,40 @@ staggered_inner_seams = "1"
 # Restore the bambu studio default to reduce seam bulging
 seam_gap = "15%"
 
+# Also do this for the first layer (top layer has this by default) to reduce the
+# likelyhood of gaps due to the infill not having any room.
+only_one_wall_first_layer = "1"
+
 # The gap infill is equal to this everywhere except for the high quality preset
 gap_infill_speed = "!parent(key='internal_solid_infill_speed')"
 
+# Smooth the extrusion rate to remove zits when suddenly changing from a high speed to a
+# low one, for example at overhangs.
+# https://github.com/SoftFever/OrcaSlicer/wiki/extrusion-rate-smoothing
+# At 0.16mm layer height, 0.42mm line width and 4000mm/s^2 acceleration: the recommended
+# rate is somewhere between 70 and 100. Lower values will show more effect but will slow
+# down printing time. A value of 70 removed the zits and 100 showed very slight traces of
+# this feature being used, so hopefully a value of 90 is as high as it can go.
+max_volumetric_extrusion_rate_slope = "90"
+# There was no visible difference when chaning this value. 1 is recommended and the A1
+# should be able to handle it (more gcode), and 3 is good enough according to the tooltip,
+# so the middle ground of 2 is used.
+max_volumetric_extrusion_rate_slope_segment_length = "2"
+# Only worth it on the outer wall
+extrusion_rate_smoothing_external_perimeter_only = "1"
+
+# This must be disabled for extrusion smoothing.
+enable_arc_fitting = "0"
+
+# This seems to slow down the printer in places it shouldn't, like straight walls, causing
+# the layers to expand differently. Especially noticeable when extrusion smoothing is
+# active, which seems like a bug.
+slowdown_for_curled_perimeters = "0"
+
 description = """
+Compared with the default bambu profile, it has my various preferences, like infill type.
+But also settings that makes the part prettier, like adjusted seam gaps, extrusion rate
+smoothing and more outer wall loops.
+
 Consider enabling infill combination on lower (variable) layer heights to make the
 infill succeed."""

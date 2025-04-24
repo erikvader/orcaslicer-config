@@ -1,19 +1,19 @@
-# Settings that reduces artifacts on outer walls, like VFA.
+# A very good writeup:
+# https://www.reddit.com/r/BambuLab/comments/1aml185/my_conclusions_on_wall_chatter_and_how_to_fix_it/
+# TLDR; Pressure advance and flow ratio plays a big role in VFA. The symptoms get worse on
+# smaller layer heights. Slower speeds and wider outer walls can help.
+# My own experience: different filaments show different amounts of VFA, eSUN PETG+HS shows
+# more VFA, on 0.16mm layer height, than eSUN PLA+, but almost nothing on 0.24mm.
 
 # This speed on the outer wall shows the least pronounced Vertical Fine Artifacts. Too low
-# and steppers motor artifacts are showing, too high and ghosting or something starts
-# showing more.
-outer_wall_speed = "110"
+# and steppers motor artifacts are showing, too high and ghosting starts showing more.
+outer_wall_speed = "100"
 
-# Taken from the standard 0.16mm high quality profile
+# Taken from the standard 0.16mm high quality profile. All calibrations, like VFA and PA,
+# are done with this acceleration, so all profiles should have the same value to get
+# consistent results. I tried with 4000, but that just made the same artifacts pop out
+# more.
 outer_wall_acceleration = "2000"
-
-# It isn't vertical, but the top surface is slowed down to increase quality a little, just
-# like the outer wall. The lines are more even than with the default speed of 150.
-top_surface_speed = "!cap(110)"
-
-# Taken from the standard 0.16mm high quality profile
-top_surface_acceleration = "2000"
 
 # VFA test results on dark blue eSUN PLA+:
 # 0.2mm standard with outer wall accel 5000 mm/s^2 and jerk 9 mm/s^3
@@ -22,30 +22,17 @@ top_surface_acceleration = "2000"
 #   best outer wall: 100-120 mm/s
 #   worst outer wall: 60 mm/s and below
 
+# VFA test results on black eSUN PETG+HS:
+# 0.16mm high quality with outer wall accel 2000 mm/s^2 and jerk 9 mm/s^3
+#   best outer wall: 90-100 mm/s
+#   worst outer wall: 60 mm/s and below
+#   bad outer wall: 120 mm/s and up
+
 # Match this with the defaults in bambu studio, which greatly reduces ringing artefacts.
-inner_wall_acceleration = "!parent(key='default_acceleration')"
+inner_wall_acceleration = "!cap(parent(key='default_acceleration'))"
 # This is also lowered to not be so ridiculously high
-travel_acceleration = "!parent(key='default_acceleration')"
+travel_acceleration = "!cap(parent(key='default_acceleration'))"
 
-# Smooth the extrusion rate to remove zits when suddenly changing from a high speed to a
-# low one, for example at overhangs.
-# https://github.com/SoftFever/OrcaSlicer/wiki/extrusion-rate-smoothing
-# At 0.16mm layer height, 0.42mm line width and 4000mm/s^2 acceleration: the recommended
-# rate is somewhere between 70 and 100. Lower values will show more effect but will slow
-# down printing time. A value of 70 removed the zits and 100 showed very slight traces of
-# this feature being used, so hopefully a value of 90 is as high as it can go.
-max_volumetric_extrusion_rate_slope = "90"
-# There was no visible difference when chaning this value. 1 is recommended and the A1
-# should be able to handle it (more gcode), and 3 is good enough according to the tooltip,
-# so the middle ground of 2 is used.
-max_volumetric_extrusion_rate_slope_segment_length = "2"
-# Only worth it on the outer wall
-extrusion_rate_smoothing_external_perimeter_only = "1"
-
-# This must be disabled for extrusion smoothing.
-enable_arc_fitting = "0"
-
-# This seems to slow down the printer in places it shouldn't, like straight walls, causing
-# the layers to expand differently. Especially noticeable when extrusion smoothing is
-# active, which seems like a bug.
-slowdown_for_curled_perimeters = "0"
+description = """
+Compared to the default bambu profile, it has adjusted speeds and accelerations, tuned to
+get the best surface finish on my particular printer."""
