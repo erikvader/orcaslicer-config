@@ -1,2 +1,5 @@
 # To preserve gloss and more consistent layers
 dont_slow_down_outer_wall = ["1"]
+
+description = """
+Compared to the default, it doesn't slow down the outer walls."""

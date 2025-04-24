@@ -28,3 +28,7 @@ fan_speedup_overhangs = "0"
 # The auto option includes spiral z hops, which seem to cause artefacts in the outer wall
 # sometimes.
 z_hop_types = ["Slope Lift"]
+
+description = """
+Compared to the default, it disables time lapses, adjusts retractions and pre-starts the
+fan."""

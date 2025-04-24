@@ -1,2 +1,5 @@
 # Disable an experimental feature
 filament_long_retractions_when_cut = ["nil"]
+
+description = """
+Compared to the default, it doesn't do long retractions when changing filaments."""

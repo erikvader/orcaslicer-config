@@ -8,5 +8,5 @@ top_surface_speed = "!cap(100)"
 outer_wall_speed = "!cap(80)"
 
 description = """
-Speeds from eSUN for their PETG. This can probably be used for anything that needs
-to go slower. This is not intended for HS/HF, those can go faster than this."""
+Compared to the default, the speeds are adjusted to what eSUN wants for their PETG (not
+HS). This can probably be used for anything that needs to go slower."""
