@@ -1,3 +1,6 @@
 name = "eSUN PLA+"
 inherits = "Bambu PLA Basic @BBL A1"
 filament_max_volumetric_speed = ["22"]
+
+# Measured manually using the PA tower on a lime green roll
+pressure_advance = ["0.04"]

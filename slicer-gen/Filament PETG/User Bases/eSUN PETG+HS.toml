@@ -10,3 +10,6 @@ eng_plate_temp = ["75"]
 eng_plate_temp_initial_layer = ["75"]
 supertack_plate_temp = ["75"]
 supertack_plate_temp_initial_layer = ["75"]
+
+# Measured manually using the PA tower on a black roll
+pressure_advance = ["0.064"]
