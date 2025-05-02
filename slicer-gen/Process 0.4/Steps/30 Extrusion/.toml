@@ -1,0 +1,38 @@
+# Smooth the extrusion rate to remove zits when suddenly changing from a high speed to a
+# low one, for example at overhangs.
+# https://github.com/SoftFever/OrcaSlicer/wiki/extrusion-rate-smoothing
+# At 0.16mm layer height, 0.42mm line width and 4000mm/s^2 acceleration: the recommended
+# rate is somewhere between 70 and 100. Lower values will show more effect but will slow
+# down printing time. A value of 70 removed the zits at an outer wall speed of 100 mm/s.
+# Higher values, like 90, don't seem to work as well?
+# This is disabled since it added slow downs in strange places, but it does help with
+# drastic speed changes. Increasing the overhang speeds instead will hopefully fix the zit
+# issue.
+# https://github.com/SoftFever/OrcaSlicer/issues/9480
+max_volumetric_extrusion_rate_slope = "0"
+# There was no visible difference when changing this value. 1 is recommended and the A1
+# should be able to handle it (more gcode), and 3 is good enough according to the tooltip.
+max_volumetric_extrusion_rate_slope_segment_length = "1"
+# Only worth it on the outer wall
+extrusion_rate_smoothing_external_perimeter_only = "1"
+
+# This must be disabled for extrusion smoothing.
+# enable_arc_fitting = "0"
+
+# This seems to slow down the printer in places it shouldn't, like straight walls, causing
+# the layers to have a different finish. Especially noticeable when extrusion smoothing is
+# active, which seems like a bug.
+slowdown_for_curled_perimeters = "0"
+
+# Increase the overhang speeds to reduce how much the printer needs to slow down,
+# hopefully not requiring ERS. They were maybe excessive anyways? 10 mm/s is slooow.
+# https://github.com/SoftFever/OrcaSlicer/issues/9424#issuecomment-2833545888
+overhang_1_4_speed = "0"
+overhang_2_4_speed = "60"
+overhang_3_4_speed = "40"
+overhang_4_4_speed = "30"
+
+description = """
+Compared with the default bambu profile, it has changed overhang speeds and extrusion rate
+smoothing to reduce artefacts from too rapid extrusion changes in the nozzle for the PA
+system to keep up."""
