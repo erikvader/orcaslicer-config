@@ -4,3 +4,8 @@ filament_max_volumetric_speed = ["22"]
 
 # Measured manually using the PA tower on a lime green roll
 pressure_advance = ["0.04"]
+
+# Sometimes a large flat top surface get patches of underextruded plastic. I can't
+# reproduce the problem with a flow rate test, even when modified to be larger than
+# normal, so I will leave the extrusion rate parameter to the default, it gives the best
+# result in this test.
